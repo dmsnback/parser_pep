@@ -25,12 +25,12 @@ class PepParsePipeline:
         filename = 'status_summary_' + date_time + '.csv'
         total = sum(self.counter_status.values())
 
-        with open(BASE_DIR / 'results' / filename, 'w', encoding='utf-8') as file:
-            file.write('Статус,Количество\n')
+        with open(
+                BASE_DIR / 'results' / filename, 'w', encoding='utf-8'
+        ) as file:
+            file.write('Статус, Количество\n')
 
             for key,value in PepParsePipeline.counter_status.items():
                 file.write(f'{key}, {value}\n')
 
             file.write(f'Total,{total}\n')
-
-
