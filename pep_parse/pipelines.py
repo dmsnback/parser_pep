@@ -28,9 +28,9 @@ class PepParsePipeline:
         with open(
                 BASE_DIR / 'results' / filename, 'w', encoding='utf-8'
         ) as file:
-            file.write('Статус, Количество\n')
+            file.write('Статус,Количество\n')
 
-            for key,value in PepParsePipeline.counter_status.items():
+            for key, value in PepParsePipeline.counter_status.items():
                 file.write(f'{key}, {value}\n')
 
             file.write(f'Total,{total}\n')
